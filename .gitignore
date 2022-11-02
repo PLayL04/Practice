@@ -1,6 +1,9 @@
 # JetBrains Rider project files
 .idea
 
+# Visual Studio files
+.vs
+
 # User-specific files
 *.suo
 *.user

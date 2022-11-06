@@ -2,27 +2,38 @@
 {
     public class StudentOfISIT
     {
-        string Name { init; get; }
-        string Speciality { set;  get; }
-        int ScholarshipAmount { set; get; }
-        int Check { set; get; }
-        bool Warning { get; }
+        public string? Name { set; get; }
+        public string? Speciality { set;  get; }
+        public int ScholarshipAmount { set; get; } = 2916;
+        public int Check { set; get; } = 2916;
+        public bool Warning 
+        { 
+            get
+            {
+                if (this.Check > 100)
+                    return false;
+                else
+                    return true;
+            }
+        }
         public StudentOfISIT() { }
         public void GetAScholarship()
         {
             if (DateTime.Now.Day == 20)
+            {
                 this.Check += ScholarshipAmount;
+            }
         }
-        public void SpendAScholarship(int money, string itemOfExpenditure)
+        public bool SpendAScholarship(int money, string itemOfExpenditure)
         {
-            if (Warning)
+            if (this.Warning == false && this.Check - money >= 0)
             {
                 this.Check -= money;
-                Console.WriteLine(itemOfExpenditure, money);
+                return true;
             }
             else
             {
-                Console.WriteLine("Денег на счету нет!");
+                return false;
             }
         }
     }

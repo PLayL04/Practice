@@ -4,9 +4,9 @@
     {
         static void Main(string[] args)
         {
-            StudentOfISIT student =  new StudentOfISIT();
-            Console.WriteLine("Система система <Потрать стипендию разумно>\n" +
-                "Функции:\n" +
+            Console.WriteLine("Система система <Потрать стипендию разумно>");
+            StudentOfISIT student = null;           
+            Console.WriteLine("Функции:\n" +
                 "1. Задать имя\n" +
                 "2. Ввести информацию\n" +
                 "3. Получить деньги\n" +
@@ -22,55 +22,85 @@
                 {
                     case 1:
                         {
-                            if(student.Name == null && student.Speciality == null)
+                            try
                             {
-                                Console.Write("Введите имя студента: ");
-                                student.Name = Console.ReadLine();
-                                Console.Write("Введите специальность студента: ");
-                                student.Speciality = Console.ReadLine();
-                                Console.WriteLine($"Задано имя {student.Name}, задана специальность {student.Speciality}");
+                                Console.Write("Введите имя: ");
+                                string? name = Console.ReadLine();
+                                Console.Write("Введите специальность: ");
+                                string? spec = Console.ReadLine();
+                                student = new StudentOfISIT { Name = name, Speciality = spec };
                             }
-                            else
+                            catch
                             {
-                                Console.WriteLine("Данные нельзя изменить!");
+                                Console.WriteLine("Имя и специальность уже заданны!");
                             }
                             break;
                         }
                     case 2:
                         {
-                            Console.WriteLine("Данные о студенте:\n" +
+                            try
+                            {
+                                Console.WriteLine("Данные о студенте:\n" +
                                 $"Имя: {student.Name}\n" +
                                 $"Специальность: {student.Speciality}\n" +
                                 $"Размер ежемесячной стипендии: {student.ScholarshipAmount}\n" +
                                 $"Виртуальный счет: {student.Check}");
+                            }
+                            catch
+                            {
+                                Console.WriteLine("Студент не задан!");
+                            }
                             break;
                         }
                     case 3:
                         {
-                            student.GetAScholarship();
-                            Console.WriteLine($"Текущий баланс {student.Check}");
+                            try
+                            {
+                                student.GetAScholarship();
+                                Console.WriteLine($"Текущий баланс {student.Check}");
+                            }
+                            catch
+                            {
+                                Console.WriteLine("Студент не задан!");
+                            }
                             break;
                         }
                     case 4:
                         {
-                            Console.Write("Введите сумму: ");
-                            int money = Convert.ToInt32(Console.ReadLine());
-                            Console.Write("Введите на что потрачено: ");
-                            string? itemOfExpenditure = Console.ReadLine();
-                            if (student.SpendAScholarship(money, itemOfExpenditure))
+                            int money;
+                            string itemOfExpenditure;
+                            try
                             {
-                                Console.WriteLine($"Со счета списано {money} на {itemOfExpenditure}.");
+                                Console.Write("Введите сумму: ");
+                                money = Convert.ToInt32(Console.ReadLine());
+                                Console.Write("Введите на что потрачено: ");
+                                itemOfExpenditure = Console.ReadLine();
+                                if (student.SpendAScholarship(money, itemOfExpenditure))
+                                {
+                                    Console.WriteLine($"Со счета списано {money} на {itemOfExpenditure}.");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Недостаточно денег!");
+                                }
+                                Console.WriteLine($"Текущий баланс: {student.Check}");
                             }
-                            else
+                            catch
                             {
-                                Console.WriteLine("Недостаточно денег!");
+                                Console.WriteLine("Студент не задан!");
                             }
-                            Console.WriteLine($"Текущий баланс: {student.Check}");
                             break;
                         }
                     case 5:
                         {
-                            Console.WriteLine($"Текущий баланс: {student.Check}");
+                            try
+                            {
+                                Console.WriteLine($"Текущий баланс: {student.Check}");
+                            }
+                            catch
+                            {
+                                Console.WriteLine("Студент не задан!");
+                            }
                             break;
                         }
                     case 6:

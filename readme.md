@@ -6,5 +6,6 @@ ___
 3. Arrays - Массивы
 4. Processes - Методы
 5. Arrays Extra - Дополнительные задачи по массивам
+6. Classes - Классы
 
 <img src="img/image.jpg" width="150" height="150">

@@ -22,7 +22,7 @@
                 {
                     case 1:
                         {
-                            try
+                            if (student == null)
                             {
                                 Console.Write("Введите имя: ");
                                 string? name = Console.ReadLine();
@@ -30,7 +30,7 @@
                                 string? spec = Console.ReadLine();
                                 student = new StudentOfISIT { Name = name, Speciality = spec };
                             }
-                            catch
+                            else
                             {
                                 Console.WriteLine("Имя и специальность уже заданны!");
                             }

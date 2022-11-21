@@ -1,19 +1,8 @@
-﻿// Вариант №3
-
-using Arrays_Extra;
-Task1.Main();
-/*
-Console.Write("Какую программу запустить?: ");
-int arg = Convert.ToInt32(Console.ReadLine());
-
-switch (arg)
+﻿using Arrays_Extra;
+Random random = new Random();
+int[] mass = new int[random.Next(1, 10)]; // создаем массив
+for (int i = 0; i < mass.Length; i++)
 {
-    default:
-    {
-        Console.WriteLine("Нет такой программы!");
-        Console.Write("Нажмите, чтобы завершить...");
-        Console.ReadKey();
-        break;
-    }
+    mass[i] = random.Next(-10, 10); // заполняем его значениями
 }
-*/
+Task5.Main();

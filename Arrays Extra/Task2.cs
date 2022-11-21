@@ -2,9 +2,14 @@
 
 public class Task2
 {
-    public static void Main(int[] input)
+    public static void Main()
     {
-        int[] mass = input;
+        Random random = new Random();
+        int[] mass = new int[random.Next(1, 10)]; // создаем массив
+        for (int i = 0; i < mass.Length; i++)
+        {
+            mass[i] = random.Next(-10, 10); // заполняем его значениями
+        }
         int first = 0, last = mass.Length - 1, sum = 0;
         for (int i = 0; i < mass.Length; i++) // ищем первый нуль
         {

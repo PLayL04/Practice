@@ -4,41 +4,47 @@
     {
         public static void Main()
         {
-            int[,] mass = new int[,] { { 0, 1, 1 }, { 3, 4, 5 }, { 0, 7, 8 }, { 1, 1, 1 } };
-            List<int> list = new List<int>();
-            bool flag = false;
-            int l = 0;
+            int[,] mass = new int[,] { { 0, 1, 1 }, { 3, 4, 5 }, { 0, 7, 8 }, { 4, 4, 4 } };
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+            Dictionary<int, int> dict2 = new Dictionary<int, int>();
             for (int i = 0; i < mass.GetLength(0); i++)
             {
-                if (flag)
+                for (int j = 0; j < mass.GetLength(1); j++)
                 {
-                    list.Add(l);
-                }
-                if (!flag)
-                {
-                    list.Add(0);
-                }
-                l = 0;
-                flag = false;
-                for (int j = 1; j < mass.GetLength(1); j++)
-                {
-                    if (mass[i,j] == mass[i, j - 1] && !flag)
+                    bool flag = dict.ContainsKey(mass[i, j]);
+                    if (dict.ContainsKey(mass[i, j]))
                     {
-                        flag = true;
-                        l += 1;
+                        int value = mass[i, j] + 1;
+                        dict.Remove(mass[i, j]);
+                        dict.Add(mass[i, j], value);
                     }
-                    else if (mass[i, j] != mass[i, j - 1] && flag)
+                    else
                     {
-                        list.Add(l);
-                        l = 0;
-                        flag = false;
+                        dict.Add(mass[i, j], 1);
                     }
                 }
+                int[] max = new int[2] { 0, 0 };
+                foreach(var n in dict)
+                {
+                    if (max[1] < n.Value)
+                    {
+                        max[0] = n.Key;
+                        max[1] = n.Value;
+                    }
+                }
+                dict.Clear();
+                dict2.Add(i, max[1]);
             }
-            foreach (int i in list)
+            int[] maxx = new int[2] {0,0};
+            foreach (var n in dict2)
             {
-                Console.WriteLine(i);
+                if (maxx[1] < n.Value)
+                {
+                    maxx[1] = n.Value;
+                    maxx[0] = n.Key;
+                }
             }
+            Console.WriteLine(maxx[0]);
         }
     }
 }

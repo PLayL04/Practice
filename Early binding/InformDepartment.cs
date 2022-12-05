@@ -18,10 +18,10 @@
         }
         public new string PrintEmployees()
         {
-            string result = "==Список сотрудников департамента " + Title + "==\n";
+            string result = "==Список сотрудников " + Title + "==\n";
             foreach (var item in Employees)
             {
-                result += item.Name + item.Age + "\n";
+                result += item.Name + " Возраст:" + item.Age + "\n";
             }
             result += "--------------";
             return result;

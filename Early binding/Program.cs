@@ -63,7 +63,10 @@
                 Console.WriteLine($"\tСпециальность = {candidate.PersonSpeciality.ToString()}.");
                 Console.WriteLine($"\tСредний балл = {candidate.Score}.\n");
             }
-
+            foreach(Department department in factory.Departments)
+            {
+                Console.WriteLine(department.PrintEmployees());
+            }
         }
     }
 }

@@ -18,13 +18,7 @@
         }
         public new string PrintEmployees()
         {
-            string result = "==Список сотрудников департамента " + Title + "==\n";
-            foreach (var item in Employees)
-            {
-                result += item.Name + " " + item.Age + "\n";
-            }
-            result += "--------------";
-            return result;
+            return base.PrintEmployees() + "sdf";
         }
     }
 }

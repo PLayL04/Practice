@@ -28,3 +28,6 @@
  
 # NuGet Packages
 **/packages/
+
+# GhotsWriter backup
+.backup

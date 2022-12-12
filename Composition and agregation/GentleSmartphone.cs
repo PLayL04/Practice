@@ -1,8 +1,8 @@
-﻿namespace Composition_and_agregation
+﻿namespace comp
 {
     public class GentleSmartphone
     {
-        int SmartphoneID { get; set; }
+        public int SerialNumber { get; set; }
         public TactileSensor Sensor;
         public GentleSmartphone()
         {

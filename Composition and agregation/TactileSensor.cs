@@ -1,7 +1,7 @@
-﻿namespace Composition_and_agregation
+﻿namespace comp
 {
     public class TactileSensor
     {
-        float Sensitivity = 10f;
+        public const float Sensivity = 60f;
     }
 }

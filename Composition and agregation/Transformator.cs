@@ -6,6 +6,6 @@
     }
     internal class TransformatorType
     {
-        public enum ChoDelaet { Multiplier, Divider }
+        public enum Do { Multiplier, Divider }
     }
 }

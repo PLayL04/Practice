@@ -20,7 +20,7 @@
                         customer.Smartphone = smartphones.FirstOrDefault();
                         smartphone_temp = customer.Smartphone;
                         smartphones.Remove(smartphone_temp);
-                        Console.WriteLine("Смартфон под номером {0} был подарен {1}", smartphone_temp.SerialNumber, customer.FullName);
+                        Console.WriteLine("Смартфон {0} был подарен {1}", smartphone_temp.SerialNumber, customer.FullName);
                     }
                     else if (customer.GentleRate >= TactileSensor.Sensivity / 2 / 1.5 & customer.GentleRate < TactileSensor.Sensivity / 1.5)
                     {
@@ -30,9 +30,9 @@
                         transformator_temp = customer.TransformModule;
                         smartphones.Remove(smartphone_temp);
                         transformators.Remove(transformator_temp);
-                        TransformatorType.ChoDelaet h = (TransformatorType.ChoDelaet)1;
+                        TransformatorType.Do h = (TransformatorType.Do)1;
 
-                        Console.WriteLine("Смартфон под номером {0} и трансформатор {1} под номером {2} был подарен {3}", smartphone_temp.SerialNumber, h, transformator_temp.Number, customer.FullName);
+                        Console.WriteLine("Смартфон {0} и трансформатор {1} {2} был подарен {3}", smartphone_temp.SerialNumber, h, transformator_temp.Number, customer.FullName);
                     }
                     else if (customer.GentleRate > TactileSensor.Sensivity * 2 & customer.GentleRate <= TactileSensor.Sensivity * 2 * 2)
                     {
@@ -42,9 +42,9 @@
                         transformator_temp = customer.TransformModule;
                         smartphones.Remove(smartphone_temp);
                         transformators.Remove(transformator_temp);
-                        TransformatorType.ChoDelaet h = (TransformatorType.ChoDelaet)0;
+                        TransformatorType.Do h = (TransformatorType.Do)0;
 
-                        Console.WriteLine("Смартфон под номером {0} и трансформатор {1} под номером {2} был подарен {3}", smartphone_temp.SerialNumber, h, transformator_temp.Number, customer.FullName);
+                        Console.WriteLine("Смартфон {0} и трансформатор {1} {2} был подарен {3}", smartphone_temp.SerialNumber, h, transformator_temp.Number, customer.FullName);
                     }
                     else
                         Console.WriteLine("{0} слишком нежный или недостаточно нежный", customer.FullName);

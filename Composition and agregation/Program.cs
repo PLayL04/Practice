@@ -7,17 +7,17 @@ internal class Program
         Customer customer1 = new Customer()
         {
             FullName = "Вася",
-            GentleRate = 80
+            GentleRate = 160f
         };
         Customer customer2 = new Customer()
         {
             FullName = "Ваня",
-            GentleRate = 16
+            GentleRate = 10f
         };
         Customer customer3 = new Customer()
         {
             FullName = "Петр",
-            GentleRate = 62
+            GentleRate = 50f
         };
 
         GentleSmartphone smartphone1 = new GentleSmartphone()
@@ -62,8 +62,5 @@ internal class Program
         factory.transformators.Add(transformator3);
 
         factory.SaleSmartphone();
-
-
-        Console.ReadLine();
     }
 }

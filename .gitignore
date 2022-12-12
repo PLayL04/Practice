@@ -30,4 +30,4 @@
 **/packages/
 
 # GhotsWriter backup
-.backup
+*.backup

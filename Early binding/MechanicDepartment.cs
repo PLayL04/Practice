@@ -18,7 +18,12 @@
         }
         public new string PrintEmployees()
         {
-            return base.PrintEmployees() + "sdf";
+            foreach (var item in Employees)
+            {
+                item.Name += $" {item.Age} лет";
+            }
+            string str = base.PrintEmployees();
+            return str;
         }
     }
 }

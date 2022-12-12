@@ -13,6 +13,12 @@
         static void Main(string[] args)
         {
             Factory factory = new Factory();
+            ElectricianDepartment ed = new ElectricianDepartment { Title = "Энергетическое подразделение" };
+            MechanicDepartment md = new MechanicDepartment { Title = "Ремонтно-механическое подразделение" };
+            InformDepartment id = new InformDepartment { Title = "испетчерское подразделение" };
+            factory.Departments.Add(ed);
+            factory.Departments.Add(md);
+            factory.Departments.Add(id);
 
             Person person1 = new Person("Витя", 19, 4.5, Speciality.Electrician);
             Person person2 = new Person("Вова", 29, 4.1, Speciality.Mechanic);
@@ -30,18 +36,6 @@
             factory.Candidates.Add(person6);
             factory.Candidates.Add(person7);
 
-            factory.Departments = new List<Department>()
-            {
-                new ElectricianDepartment() {
-                    Title = "Electrician Department"
-                },
-                new MechanicDepartment() {
-                    Title = "Mechanic Department"
-                },
-                new InformDepartment() {
-                    Title = "Inform Department"
-                }
-            };
             foreach (Department department in factory.Departments)
             {
                 department.StaffSelection(factory.Candidates);
@@ -63,10 +57,16 @@
                 Console.WriteLine($"\tСпециальность = {candidate.PersonSpeciality.ToString()}.");
                 Console.WriteLine($"\tСредний балл = {candidate.Score}.\n");
             }
-            foreach(Department department in factory.Departments)
-            {
-                Console.WriteLine(department.PrintEmployees());
-            }
+            
+
+            string result = md.PrintEmployees();
+            Console.WriteLine(result);
+
+            string result1 = id.PrintEmployees();
+            Console.WriteLine(result1);
+
+            string result2 = ed.PrintEmployees();
+            Console.WriteLine(result2);
         }
     }
 }

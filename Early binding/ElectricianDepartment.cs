@@ -17,13 +17,12 @@
         }
         public new string PrintEmployees()
         {
-            string result = $"Список сотрудников " + Title + "==\n";
             foreach (var item in Employees)
             {
-                result += item.Name + " Средний балл:" + item.Score + "\n";
+                item.Name += $" {item.Score} баллов";
             }
-            result += "--------------";
-            return result;
+            string str = base.PrintEmployees();
+            return str;
         }
     }
 }

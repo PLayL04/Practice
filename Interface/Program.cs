@@ -76,12 +76,12 @@ internal class Program
         foreach (Student student in Students)
         {
             Console.WriteLine($"Данные по зачетам у обучающегося {student.Name}:");
-            string TExtRes = "";
+            string output = "";
             foreach (Discipline disciplines in Discipline)
             {
-                TExtRes += disciplines.Check(student);
+                output += disciplines.Check(student);
             }
-            Console.WriteLine($"{TExtRes}");
+            Console.WriteLine($"{output}");
         }
 
     }

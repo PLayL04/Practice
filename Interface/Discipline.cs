@@ -11,7 +11,7 @@
             Name = name;
         }
 
-        public string Check(Student student)
+        public string Check(Student student) // проверка на автомат
         {
             bool PracticeCheck = true;
             bool FinalControlCheck = true;

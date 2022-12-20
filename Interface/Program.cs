@@ -4,13 +4,13 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        List<Discipline> Discipline = new List<Discipline>()
+        List<Discipline> Discipline = new List<Discipline>() // 500 дисциплин
             {
                 new Programming(),
                 new History(),
                 new MathematicalAnalysis()
             };
-        List<Student> Students = new List<Student>()
+        List<Student> Students = new List<Student>() // 100500 студентов
             {
                 new Student("Геннадий")
                 {
@@ -73,7 +73,7 @@ internal class Program
                     }
                 },
             };
-        foreach (Student student in Students)
+        foreach (Student student in Students) // вывод автоматов у гражданина n
         {
             Console.WriteLine($"Данные по зачетам у обучающегося {student.Name}:");
             string output = "";
@@ -83,6 +83,5 @@ internal class Program
             }
             Console.WriteLine($"{output}");
         }
-
     }
 }

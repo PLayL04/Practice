@@ -3,7 +3,7 @@
     public class StudentOfISIT
     {
         public string Name { init; get; }
-        public string Speciality { init;  get; }
+        public string Speciality { init; get; }
         public int ScholarshipAmount { set; get; } = 2916;
         public int Check { set; get; } = 2916;
         private bool Flag // получил ли стипендию
@@ -21,8 +21,8 @@
             }
         }
         private int DateFlag { set; get; } = 0;// дата получения стипендии
-        public bool Warning 
-        { 
+        public bool Warning
+        {
             get
             {
                 if (this.Check > 100)
@@ -32,7 +32,7 @@
             }
         }
         public StudentOfISIT() { }
-        
+
         public void GetAScholarship()
         {
             if (DateTime.Now.Day == 7 && this.Flag == false)

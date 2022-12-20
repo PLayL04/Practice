@@ -13,12 +13,12 @@ public class Task1
         ans[1] = Sum(coll.Min(), coll.Max());
         return ans;
     }
-    
+
     public static void Main()
     {
         Random random = new Random();
         int[] coll = new int[random.Next(5, 25)];
-        for(int i = 0; i < 5; i++)
+        for (int i = 0; i < 5; i++)
             coll[i] = random.Next(-10, 10);
         int[] a = Collection(coll);
         Console.WriteLine($"{a[0]} {a[1]}");

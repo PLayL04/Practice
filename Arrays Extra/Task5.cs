@@ -24,7 +24,7 @@
                     }
                 }
                 int[] max = new int[2] { 0, 0 };
-                foreach(var n in dict)
+                foreach (var n in dict)
                 {
                     if (max[1] < n.Value)
                     {
@@ -35,7 +35,7 @@
                 dict.Clear();
                 dict2.Add(i, max[1]);
             }
-            int[] maxx = new int[2] {0,0};
+            int[] maxx = new int[2] { 0, 0 };
             foreach (var n in dict2)
             {
                 if (maxx[1] < n.Value)

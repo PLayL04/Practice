@@ -17,14 +17,14 @@ public class Task5
         Console.WriteLine("получившийся массив:");
         foreach (var d in N_)
         {
-            var i = (int) d;
+            var i = (int)d;
             max_ = Math.Max(max_, i);
             N_[N] = max_;
         }
 
         foreach (var d in N_)
         {
-            var i = (int) d;
+            var i = (int)d;
             Console.WriteLine(i);
         }
         Console.Write("Нажмите, чтобы завершить...");

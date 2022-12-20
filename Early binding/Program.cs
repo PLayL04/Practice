@@ -57,7 +57,7 @@
                 Console.WriteLine($"\tСпециальность = {candidate.PersonSpeciality.ToString()}.");
                 Console.WriteLine($"\tСредний балл = {candidate.Score}.\n");
             }
-            
+
 
             string result = md.PrintEmployees();
             Console.WriteLine(result);

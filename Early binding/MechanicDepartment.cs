@@ -1,6 +1,6 @@
 ﻿namespace Inheritance
 {
-    public class MechanicDepartment: Department
+    public class MechanicDepartment : Department
     {
         string Name = "Механик";
         double MinScore = 4.0;

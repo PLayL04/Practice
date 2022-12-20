@@ -18,25 +18,25 @@ public class Task4
             switch (m)
             {
                 case 1:
-                {
-                    Console.WriteLine($"Ваша выручка: {s * 0.07}");
-                    break;
-                }
+                    {
+                        Console.WriteLine($"Ваша выручка: {s * 0.07}");
+                        break;
+                    }
                 case 2:
-                {
-                    Console.WriteLine($"Ваша выручка: {s * Math.Pow(1.08, 3) - s}");
-                    break;
-                }
+                    {
+                        Console.WriteLine($"Ваша выручка: {s * Math.Pow(1.08, 3) - s}");
+                        break;
+                    }
                 case 3:
-                {
-                    Console.WriteLine($"Ваша выручка: {s * Math.Pow(1.1, 5) - s}");
-                    break;
-                }
+                    {
+                        Console.WriteLine($"Ваша выручка: {s * Math.Pow(1.1, 5) - s}");
+                        break;
+                    }
                 default:
-                {
-                    Console.WriteLine("Нет такого вклада");
-                    break;
-                }
+                    {
+                        Console.WriteLine("Нет такого вклада");
+                        break;
+                    }
             }
             Console.Write("Нажмите, чтобы завершить...");
             Console.ReadKey();

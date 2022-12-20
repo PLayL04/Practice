@@ -9,9 +9,9 @@ public class Task3
         Console.Write("На зачет пришло: ");
         int n = Convert.ToInt32(Console.ReadLine());
         int[] pod = new int[n];
-        for(int i = 0; i < n; i++)
+        for (int i = 0; i < n; i++)
         {
-            if (isManual) 
+            if (isManual)
             {
                 Console.Write($"{i} подтянулся: ");
                 pod[i] = Convert.ToInt32(Console.ReadLine());

@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Система система <Потрать стипендию разумно>");
-            StudentOfISIT student = null;           
+            StudentOfISIT student = null;
             Console.WriteLine("Функции:\n" +
                 "1. Задать имя\n" +
                 "2. Ввести информацию\n" +

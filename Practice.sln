@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Early binding", "Early binding\Early binding.csproj", "{475DFDD8-A8EF-496B-B27B-D59067A8C143}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composition and agregation", "Composition and agregation\Composition and agregation.csproj", "{74DEF645-43D2-43FF-BB79-DC2D6BADDAE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composition and agregation", "Composition and agregation\Composition and agregation.csproj", "{74DEF645-43D2-43FF-BB79-DC2D6BADDAE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Interface.csproj", "{0871207E-0351-4FC4-9BAC-3ECCB2CBF300}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{74DEF645-43D2-43FF-BB79-DC2D6BADDAE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74DEF645-43D2-43FF-BB79-DC2D6BADDAE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74DEF645-43D2-43FF-BB79-DC2D6BADDAE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0871207E-0351-4FC4-9BAC-3ECCB2CBF300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0871207E-0351-4FC4-9BAC-3ECCB2CBF300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0871207E-0351-4FC4-9BAC-3ECCB2CBF300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0871207E-0351-4FC4-9BAC-3ECCB2CBF300}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

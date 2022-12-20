@@ -4,7 +4,7 @@
     {
         public static void Main()
         {
-            int[,] mass = new int[,] { { 0, 1, 2 }, { 3, 0, 5 }, { 0, 7, 8 }, { 1, 1, 1 } }; 
+            int[,] mass = new int[,] { { 0, 1, 2 }, { 3, 0, 5 }, { 0, 7, 8 }, { 1, 1, 1 } };
             int[] count = new int[mass.GetLength(1)]; // наличие в стобцах нулей
             for (int i = 0; i < count.Length; i++)
             {
